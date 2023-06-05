@@ -1,0 +1,11 @@
+[Unit]
+Description=wg0 home check
+After=network.target
+
+[Service]
+ExecStartPre=/bin/sleep 25
+Type=simple
+ExecStart=/bin/bash /root/wg0HomeDisable.sh
+
+[Install]
+WantedBy=multi-user.target
